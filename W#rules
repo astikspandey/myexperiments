@@ -1,0 +1,43 @@
+Available Commands:
+------------------
+prntstr(text)     : Print text (use ^varname for variables)
+exec.function(name) : Execute a defined function
+mfile            : Create a new file with content
+rfile            : Read and display file contents
+dfile            : Delete a specified file
+efile            : Execute a W# (.wh) file
+lsfile           : List all files in W# directory
+clear            : Clear the terminal screen
+verbose          : Toggle verbose mode (execution details) on/off
+help             : Show this help message
+quit             : Exit the terminal
+
+W# Language Features:
+------------------
+define.var(name)  : Define a new variable
+exec.setval.variable(name//value) : Set variable value (supports math operations)
+exec.setval.function(name//code)  : Set function code
+exec.increment(name//number) : Increment variable by number
+exec.decrement(name//number) : Decrement variable by number
+define.func(name) : Define a new function
+exec.condition(condition//code) : Execute code if condition is true
+exec.loop(range//code) : Execute code in a for loop
+
+Examples:
+------------------
+define.var(x)
+exec.setval.variable(x//5)
+define.var(y)
+exec.setval.variable(y//10)
+exec.setval.variable(x//^y + 5)     # Addition: x = y + 5
+exec.setval.variable(x//^y - 5)     # Subtraction: x = y - 5
+exec.setval.variable(x//^y * 5)     # Multiplication: x = y * 5
+exec.setval.variable(x//^y / 5)     # Division: x = y / 5
+exec.setval.variable(x//^y @ 2)     # Power: x = y² (using @ instead of ^)
+exec.setval.variable(x//^y % 5)     # Modulo: x = y mod 5
+
+~ This is a comment line in W#
+
+Note: Use @ for powers instead of ^ since ^ is used for variable references
+
+Note: W# files use the .wh extension and can contain any valid W# commands
